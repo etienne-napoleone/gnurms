@@ -2,6 +2,7 @@
 import discord
 import asyncio
 import re
+import os
 import sys
 
 r = re.compile(r'(?:[^/]|^)[lL]inux')

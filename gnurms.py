@@ -32,4 +32,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run(sys.argv[1])
+if 'DISCORD_TOKEN' in os.environ:
+    client.run(os.environ['DISCORD_TOKEN'])
+else:
+    client.run(sys.argv[1])

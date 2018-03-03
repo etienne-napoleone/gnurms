@@ -23,15 +23,13 @@ async def on_message(message):
         msg = rms.format(message.author.mention) + "\n\n" + link
         try:
             await client.send_message(message.channel, msg)
+            print("Someone got GNU/taught!")
         except Exception as e:
             print(e)
 
 @client.event
 async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
+    print('Logged in as {}({})'.format(client.user.name,client.user.id))
 
 if 'DISCORD_TOKEN' in os.environ:
     client.run(os.environ['DISCORD_TOKEN'])

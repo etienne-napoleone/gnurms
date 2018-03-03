@@ -2,3 +2,7 @@ run.config:
   engine: python
   engine.config:
     runtime: python-3.6
+    pip_install: 'pip install pipenv'
+    pipenv_install: 'pipenv install'
+web.bot:
+  start: 'pipenv run python gnurms.py'

@@ -2,7 +2,6 @@ run.config:
   engine: python
   engine.config:
     runtime: python-3.6
-    pip_install: 'pip install pipenv -I'
   extra_steps:
     - pipenv install
 worker.bot:

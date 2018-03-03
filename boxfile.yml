@@ -1,4 +1,4 @@
 run.config:
   engine: python
-  config:
+  engine.config:
     runtime: python-3.6

@@ -1,0 +1,1 @@
+worker: gnurms.py

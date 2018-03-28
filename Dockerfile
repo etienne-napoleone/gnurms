@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . ./
 
-ENTRYPOINT ["pipenv", "run"]
+ENTRYPOINT ["pipenv", "run", "python"]

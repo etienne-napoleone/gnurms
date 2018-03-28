@@ -1,5 +1,7 @@
 FROM kennethreitz/pipenv:latest
 
-RUN pipenv sync
+WORKDIR /app
+
+COPY . ./
 
 ENTRYPOINT ["pipenv run"]

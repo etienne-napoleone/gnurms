@@ -1,4 +1,6 @@
 before_script:
+  - apt update
+  - apt instll python-pip
   - pip install pipenv
   - pipenv sync -d
 

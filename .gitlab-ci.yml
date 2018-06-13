@@ -1,0 +1,7 @@
+before_script:
+  - pip install pipenv
+  - pipenv sync -d
+
+flake:
+  script:
+    - flake8 .

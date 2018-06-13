@@ -1,8 +1,0 @@
-run.config:
-  engine: python
-  engine.config:
-    runtime: python-3.6
-  extra_steps:
-    - pipenv install
-worker.bot:
-  start: 'pipenv run python gnurms.py'

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import re
 import os
 import sys
@@ -30,6 +30,7 @@ rms = ("I'd just like to interject for a moment. What {} is referring to as "
 
 client = discord.Client()
 
+
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -40,13 +41,15 @@ async def on_message(message):
         msg = rms.format(message.author.mention)
         try:
             await client.send_message(message.channel, msg)
-            print("Someone got GNU/taught!")
+            print('Green pepper')
         except Exception as e:
-            print("Could not explain GNU/Linux to some plebs due to some errors")
+            print('Could not explain GNU/Linux to some plebs due ' +
+                  'to some inane errors')
+
 
 @client.event
 async def on_ready():
-    print('Logged in as {}({})'.format(client.user.name,client.user.id))
+    print('Logged in as {}({})'.format(client.user.name, client.user.id))
 
 if 'DISCORD_TOKEN' in os.environ:
     client.run(os.environ['DISCORD_TOKEN'])
